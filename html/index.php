@@ -4,7 +4,7 @@ $output = "";
 
 if (!isset($_GET['pass'])) {
     $content = file_get_contents(__FILE__);
-    $content = preg_replace('/flag\{[0-9a-zA-Z_?!.,]+\}/i', 'flag{xxxxxxxxxxxxxxxxx}', $content);
+    $content = preg_replace('/flag\{.+?\}/i', 'flag{xxxxxxxxxxxxxxxxx}', $content);
     echo '<div class="code-highlight">';
     highlight_string($content);
     echo '</div>';
